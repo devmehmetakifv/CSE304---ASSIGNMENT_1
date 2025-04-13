@@ -1,0 +1,27 @@
++---------------------------+
+| FurniturePrototypeRegistry|
+|---------------------------|
+| -instance: FurniturePrototypeRegistry [static]
+| -prototypes: Map<String, Furniture>
+|---------------------------|
+| +getInstance(): FurniturePrototypeRegistry [static]
+| +register(String, Furniture): void
+| +getClone(String): Furniture
++---------------------------+
+            |
+            | uses
+            v
++---------------------------+
+|        Furniture          |
+|---------------------------|
+| +clone(): Furniture       |
++---------------------------+
+            ^
+            |
+            |
++------+----+----+------+
+|      |         |      |
+v      v         v      v
++------+  +------+  +------+
+| Chair |  | Sofa |  | Table |
++------+  +------+  +------+ 

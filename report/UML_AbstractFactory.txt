@@ -1,0 +1,23 @@
++-------------------+      +-------------------+      +-------------------+
+|  FurnitureFactory |<---- | ModernFurniture   |      |     Furniture     |
+|-------------------|      | Factory           |      |-------------------|
+| createChair()     |      |-------------------|      | getName()         |
+| createSofa()      |      | createChair()     |      | getDescription()  |
+| createTable()     |      | createSofa()      |      | getPrice()        |
+| getStyleName()    |      | createTable()     |      | getImage()        |
++-------------------+      | getStyleName()    |      | clone()           |
+        ^                  +-------------------+      +-------------------+
+        |                                                      ^
+        |                                                      |
++-------+-------+      +-------------------+     +------------+------------+
+| VictorianFurni|      | ArtDecoFurniture  |     |                         |
+| tureFactory   |      | Factory           |     |                         |
+|---------------|      |-------------------|     |                         |
+| createChair() |      | createChair()     |  +------+  +------+  +------+
+| createSofa()  |      | createSofa()      |  | Chair |  | Sofa |  | Table |
+| createTable() |      | createTable()     |  +------+  +------+  +------+
+| getStyleName()|      | getStyleName()    |     ^         ^         ^
++---------------+      +-------------------+     |         |         |
+                                                 |         |         |
+                                            Implemented by concrete classes
+                                            for each style (Modern, Victorian, ArtDeco) 

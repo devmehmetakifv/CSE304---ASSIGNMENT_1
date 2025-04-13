@@ -1,0 +1,25 @@
++----------------------+
+|   FactoryManager     |
+|----------------------|
+| -instance: FactoryManager [static]
+| -factories: Map<String, FurnitureFactory>
+|----------------------|
+| -FactoryManager()    |
+| +getInstance(): FactoryManager [static]
+| +getFactory(String): FurnitureFactory
+| +getAllFactories(): Map<String, FurnitureFactory>
++----------------------+
+
++-------------------------------+
+|   FurniturePrototypeRegistry  |
+|-------------------------------|
+| -instance: FurniturePrototypeRegistry [static]
+| -prototypes: Map<String, Furniture>
+|-------------------------------|
+| -FurniturePrototypeRegistry() |
+| +getInstance(): FurniturePrototypeRegistry [static]
+| -initializePrototypes(): void
+| +register(String, Furniture): void
+| +getClone(String): Furniture
+| +containsKey(String): boolean
++-------------------------------+ 
